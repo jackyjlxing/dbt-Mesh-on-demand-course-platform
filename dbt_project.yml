@@ -21,6 +21,8 @@ vars:
   truncate_timespan_to: "{{ current_timestamp() }}"
 
 models:
-  jaffle_shop_mesh_platform:
+  core_platform:
     staging:
       +materialized: view
+    marts:
+      +materialized: table
