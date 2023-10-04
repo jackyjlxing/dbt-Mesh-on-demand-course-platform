@@ -1,8 +1,4 @@
-with order_items as (
-    select * from {{ ref('stg_order_items') }}
-),
-
-orders as (
+with orders as (
     select * from {{ ref('stg_orders') }}
 ),
 
@@ -16,14 +12,19 @@ locations as (
 
 joined as (
     select
-        order_items.*,
+        orders.order_id, 
+        orders.location_id,
+        orders.customer_id,
+        orders.order_total,
+        orders.tax_paid,
         orders.ordered_at,
-        customers.*,
-        locations.*
+        customers.customer_name,
+        locations.location_name,
+        locations.tax_rate,
+        locations.location_opened_at
 
-    from order_items
-        left join orders 
-            on order_items.order_id  = orders.order_id
+    from 
+       orders 
         left join customers 
             on orders.customer_id = customers.customer_id
         left join locations 
