@@ -23,7 +23,7 @@ renamed as (
         tax_rate,
 
         ---------- timestamps
-        opened_at
+        opened_at as location_opened_at
 
     from source
 
