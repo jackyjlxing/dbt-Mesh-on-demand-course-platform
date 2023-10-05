@@ -2,6 +2,7 @@
     {% set cols=adapter.get_columns_in_relation(model) %}
 models:
   - name: {{ model }}
+    access: public
     config:
       contract:
         enforced: true
