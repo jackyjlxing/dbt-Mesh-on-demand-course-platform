@@ -1,6 +1,6 @@
 with orders as (
     select * from {{ ref('stg_orders') }}
-    where ordered_at >= '2022-01-01'
+    where ordered_at >= '2023-03-01'
         and ordered_at < current_date
 ),
 
