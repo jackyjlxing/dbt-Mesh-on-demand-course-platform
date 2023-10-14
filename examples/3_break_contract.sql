@@ -1,4 +1,4 @@
-##This should be what your broken fct_orders.sql model looks like after breaking the contract:
+/*This should be what your broken fct_orders.sql model looks like after breaking the contract: */
 
 with orders as (
     select * from {{ ref('int_orders') }}
