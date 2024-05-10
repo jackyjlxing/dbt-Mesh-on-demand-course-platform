@@ -3,16 +3,16 @@ version: 2
 sources:
   - name: jaffle_shop
     database: raw
-    schema: jaffle_shop
+    schema: new_jaffle_shop
     description: E-commerce data
     tables:
       - name: customers
         description: One record per person who has purchased one or more items
       - name: orders
         description: One record per order (consisting of one or more order items)
-      - name: order_items
+      - name: items
         description: Items included in an order
-      - name: locations
+      - name: stores
       - name: products
         description: One record per SKU for items sold in stores
       - name: supplies
