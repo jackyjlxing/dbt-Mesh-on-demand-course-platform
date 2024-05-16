@@ -1,0 +1,4 @@
+models:
+  - name: int_orders.sql
+    access: private
+    group: finance
