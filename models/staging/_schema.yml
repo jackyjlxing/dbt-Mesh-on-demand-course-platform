@@ -26,7 +26,7 @@ models:
         tests:
           - not_null
           - unique
-  - name: stg_proucts
+  - name: stg_products
     access: protected
     config:
       group: product
