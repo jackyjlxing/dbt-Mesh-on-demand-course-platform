@@ -2,27 +2,36 @@ models:
   - name: stg_customers
     columns:
       - name: customer_id
+        tests:
+          - not_null
+          - unique
   - name: stg_locations
     columns:
       - name: location_id
+        tests:
+          - not_null
+          - unique
   - name: stg_order_items
-    access: protected
-    config:
-      group: product
     columns:
       - name: order_item_id
+        tests:
+          - not_null
+          - unique
   - name: stg_orders
     columns:
       - name: order_id
+        tests:
+          - not_null
+          - unique
   - name: stg_products
-    access: private
-    config:
-      group: product
     columns:
       - name: product_id
+        tests:
+          - not_null
+          - unique
   - name: stg_supplies
-    access: protected
-    config:
-      group: product
     columns:
       - name: supply_id
+        tests:
+          - not_null
+          - unique

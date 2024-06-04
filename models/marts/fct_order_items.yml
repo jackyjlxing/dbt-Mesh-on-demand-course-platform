@@ -1,13 +1,13 @@
 models:
   - name: fct_order_items
-    access: public
-    group: finance
     config:
       contract:
         enforced: true
     columns:
       - name: order_item_id
         data_type: varchar
+        constraints:
+          - type: not_null
       - name: order_id
         data_type: varchar
       - name: product_id
