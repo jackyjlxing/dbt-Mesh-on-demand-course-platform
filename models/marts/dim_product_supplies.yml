@@ -1,8 +1,10 @@
 models:
   - name: dim_product_supplies
+    access: public
     config:
       contract:
         enforced: true
+      group: product
     columns:
       - name: product_name
         data_type: varchar
