@@ -24,6 +24,9 @@ models:
           - not_null
           - unique
   - name: stg_products
+    access: private
+    config:
+      group: product
     columns:
       - name: product_id
         tests:

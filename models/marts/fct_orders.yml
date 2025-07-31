@@ -1,9 +1,11 @@
 models:
   - name: fct_orders
     latest_version: 1
+    access: public
     config:
       contract:
         enforced: true
+      group: finance
     columns:
       - name: order_id
         data_type: varchar

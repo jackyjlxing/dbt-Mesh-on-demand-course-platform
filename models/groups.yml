@@ -1,0 +1,9 @@
+groups:
+  - name: finance
+    owner:
+      name: jone doe
+      email: jdoe@fake.com
+  - name: product
+    owner:
+      name: jane doe
+      email: jndoe@fake.com
