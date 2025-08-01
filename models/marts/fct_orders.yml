@@ -11,6 +11,9 @@ models:
         data_type: varchar
         constraints:
           - type: not_null
+        test:
+          - unique
+          - not_null
       - name: location_id
         data_type: varchar
       - name: customer_id
