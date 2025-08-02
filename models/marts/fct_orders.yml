@@ -22,7 +22,7 @@ models:
         data_type: number
       - name: tax_paid
         data_type: number
-      - name: order_date
+      - name: ordered_at
         data_type: timestamp_ntz
       - name: customer_name
         data_type: varchar
@@ -48,5 +48,7 @@ models:
             data_type: number
           - name: location_opened_at
             data_type: date
+          - name: order_date
+            data_type: date
           - include: all
-            exclude: [order_total]
+            exclude: [order_total,ordered_at]
