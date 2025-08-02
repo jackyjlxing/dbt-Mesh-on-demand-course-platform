@@ -49,6 +49,6 @@ models:
           - name: location_opened_at
             data_type: date
           - name: order_date
-            data_type: date
+            data_type: timestamp_ntz
           - include: all
             exclude: [order_total,ordered_at]
