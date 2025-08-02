@@ -24,3 +24,7 @@ models:
         data_type: boolean
       - name: product_id
         data_type: varchar
+        tests:
+          - relationships:
+              to: ref('stg_product')
+              field: product_id
