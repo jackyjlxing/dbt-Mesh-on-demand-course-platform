@@ -1,4 +1,4 @@
 select 
-    amount
+    order_total
 from {{ ref('fct_orders')}}
-where amount <= 5
+where order_total <= 5

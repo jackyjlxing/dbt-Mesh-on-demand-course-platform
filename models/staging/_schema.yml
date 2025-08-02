@@ -23,6 +23,9 @@ models:
         tests:
           - not_null
           - unique
+      - name: order_total
+        tests:
+          - assert_column_is_greater_than_5
   - name: stg_products
     access: private
     config:
