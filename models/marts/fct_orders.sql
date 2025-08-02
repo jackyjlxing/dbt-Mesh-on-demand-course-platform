@@ -9,7 +9,7 @@ final as (
         customer_id,
         order_total,
         tax_paid,
-        ordered_at as order_date,
+        ordered_at ,
         customer_name,
         location_name,
         tax_rate,
