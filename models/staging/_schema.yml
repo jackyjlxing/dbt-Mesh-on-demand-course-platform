@@ -18,6 +18,9 @@ models:
           - not_null
           - unique
   - name: stg_orders
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "order_total > 5"
     columns:
       - name: order_id
         tests:
@@ -26,7 +29,6 @@ models:
       - name: order_total
         tests:
           - assert_column_is_greater_than_5
-          - assert_dollars_spent_are_greater_than_one
   - name: stg_products
     access: private
     config:
