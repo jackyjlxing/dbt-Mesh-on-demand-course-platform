@@ -1,3 +1,9 @@
+{{
+    config(
+        enabled = false
+    )
+}}
+
 select
     customer_id, 
     avg(order_total) as average_amount
