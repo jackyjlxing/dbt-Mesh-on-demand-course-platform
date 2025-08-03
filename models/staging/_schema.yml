@@ -29,6 +29,15 @@ models:
       - name: order_total
         tests:
           - assert_column_is_greater_than_5
+          - dbt_expectations.expect_column_values_to_be_between:
+                min_value: 5
+                row_condition: "order_id is not null" 
+                strictly: True
+      - name: customer_id
+        tests:
+          - dbt_utils.cardinality_equality:
+              field: customer_id
+              to: ref('stg_customers')
   - name: stg_products
     access: private
     config:

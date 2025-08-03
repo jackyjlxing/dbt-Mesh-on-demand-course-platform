@@ -8,7 +8,10 @@ packages:
   - name: dbt_expectations
     package: metaplane/dbt_expectations
     version: 0.10.9
+  - name: audit_helper
+    package: dbt-labs/audit_helper
+    version: 0.12.1
   - name: dbt_date
     package: godatadriven/dbt_date
     version: 0.16.0
-sha1_hash: dc8077e4f9c8495dac4eddb72a7b19d027ba7099
+sha1_hash: 1bb349967604d26947cdb58e975002455a951e4a
