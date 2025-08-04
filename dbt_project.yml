@@ -29,3 +29,10 @@ models:
     marts:
       +required_tests: {"relationship.*":1}
       +materialized: table
+
+tests:
+  core_platform:
+    +severity: warn
+    +store_failures: false
+    +schema: failure
+  

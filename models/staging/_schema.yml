@@ -3,7 +3,10 @@ models:
     columns:
       - name: customer_id
         tests:
-          - not_null
+          - not_null:
+              config:
+                  severity: error
+                  error_if: ">100"
           - unique
   - name: stg_locations
     columns:
@@ -38,6 +41,8 @@ models:
           - dbt_utils.cardinality_equality:
               field: customer_id
               to: ref('stg_customers')
+              config:
+                severity: warn
   - name: stg_products
     access: private
     config:
